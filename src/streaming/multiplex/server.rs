@@ -110,7 +110,7 @@ enum InFlight<F: Future> {
 }
 
 /// The total number of requests that can be in flight at once.
-const MAX_IN_FLIGHT_REQUESTS: usize = 32;
+const MAX_IN_FLIGHT_REQUESTS: usize = 4096;
 
 impl<P, T, B, S> super::advanced::Dispatch for Dispatch<S, T, P> where
     P: ServerProto<T>,
